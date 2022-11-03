@@ -6,6 +6,9 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
   var dom = domOptions.value ? domOptions.value : 'BRfrtlip';
 
   const BASE_OPTIONS = `
+    <script type="text/javascript" src="/media/js/site.js?_=ddb358559c98dc9f79b85c6734f69e0f" data-domain="datatables.net" data-api="https://plausible.sprymedia.co.uk/api/event"></script>
+	<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+	<script type="text/javascript" src="/media/js/dynamic.php?comments-page=examples%2Fadvanced_init%2Frow_grouping.html" async></script>
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
@@ -36,6 +39,20 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
   <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>DataTables example - Row grouping</title>
+    <link rel="shortcut icon" type="image/png" href="/media/images/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+	<link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=11229a4cc52ab488c3d6ed72e1ec231e1">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<style type="text/css" class="init">
+	
+tr.group,
+tr.group:hover {
+	background-color: #ddd !important;
+}
+
+	</style>
     ${BASE_OPTIONS}
     ${EXPORT_OPTIONS}
     ${COLVIS_OPTIONS}
@@ -47,6 +64,7 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
   </html>
   <script type="text/javascript" class="init">
     $(document).ready(function () {
+    var groupColumn = 1;
       $('#${tableID.value}').DataTable({
         colReorder: true,
         dom: '${dom}',
