@@ -49,8 +49,6 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
     $(document).ready(function () {
       $('#${tableID.value}').DataTable({
         colReorder: true,
-        "pagingType": "scrolling",
-        language: {url: 'dataTables.french.json'},
         dom: '${dom}',
         buttons: [
             ${buttonSpec}
