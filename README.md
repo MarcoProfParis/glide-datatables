@@ -1,7 +1,7 @@
 # glide-datatables
 
 ## Usage
-- Use the following URL in a Glide Experimental Code colum: `https://mcdarren.github.io/glide-datatables/`
+- Use the following URL in a Glide Experimental Code colum: `https://marcoprofparis.github.io/glide-datatables/`
 - Display in a [WebView Component](https://www.glideapps.com/docs/reference/app-components/webview-component).
 
 ### Configuration Options
